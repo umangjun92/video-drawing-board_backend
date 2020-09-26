@@ -5,10 +5,13 @@
     "description": "Describe your app here.",
     "dependencies": {
         "express": "^4.17.1",
-        "socket.io": "^2.3.0"
+        "mongoose": "^5.10.7",
+        "socket.io": "^2.3.0",
+        "typegoose": "^5.9.1"
     },
     "devDependencies": {
         "@types/express": "^4.17.8",
+        "@types/mongoose": "^5.7.36",
         "@types/node": "latest",
         "@types/socket.io": "^2.1.11",
         "husky": "^4.3.0",
