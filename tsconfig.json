@@ -1,7 +1,8 @@
 {
-	"compilerOptions": {
-		"module": "commonjs",
-		"esModuleInterop": true
-	},
-	"exclude": ["node_modules"]
+    "compilerOptions": {
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "experimentalDecorators": true
+    },
+    "exclude": ["node_modules"]
 }
