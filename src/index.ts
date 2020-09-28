@@ -28,6 +28,9 @@ interface Room {
     host: string;
     users: string[];
     roomId: string;
+    videoUrl: string;
+    videoPos: number;
+    drawColor: string;
 }
 
 (async () => {
