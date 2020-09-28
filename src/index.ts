@@ -8,7 +8,7 @@ import { RoomModel } from "./models/room.model";
 
 var app = express();
 // var http = new HTTP.Server(app);
-var PORT = process.env.PORT || 8000;
+var PORT = process.env.PORT || 8080;
 
 // app.use(express.static(`${__dirname}/client`));
 
