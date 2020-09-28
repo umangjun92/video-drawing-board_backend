@@ -46,7 +46,18 @@ interface Room {
     const server = app.listen(PORT, () => {
         console.log(`server started on localhost:${PORT}`);
     });
-    const io = socket(server);
+    const io = socket(server, {
+        origins: "*:*",
+        handlePreflightRequest: (req: any, res: any) => {
+            const headers = {
+                "Access-Control-Allow-Headers": "Content-Type, Authorization",
+                "Access-Control-Allow-Origin": req.headers.origin, //or the specific origin you want to give access to,
+                "Access-Control-Allow-Credentials": true
+            };
+            res.writeHead(200, headers);
+            res.end();
+        }
+    });
     let roomHostMap = {};
 
     //Realtime message sending socket part
