@@ -156,8 +156,8 @@ interface Room {
             console.log(`msg: ${message}, room: ${room}`);
             io.to(room).emit("chat", message);
         });
-        socket.on("startDrawing", ({ roomId, xPos, yPos }: any) => {
-            io.to(roomId).emit("startDrawing", { xPos, yPos });
+        socket.on("startDrawing", ({ roomId, xPos, yPos, color }: any) => {
+            io.to(roomId).emit("startDrawing", { xPos, yPos, color });
         });
         socket.on("drawing", ({ roomId, xPos, yPos }: any) => {
             io.to(roomId).emit("drawing", { xPos, yPos });
